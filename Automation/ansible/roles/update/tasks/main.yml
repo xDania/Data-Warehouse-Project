@@ -1,0 +1,23 @@
+- name: Update package
+  apt:
+    update_cache: yes
+
+- name: Upgrade packages
+  apt:
+    upgrade: dist
+
+- name: Upgrade kernel
+  apt:
+    name:
+      - linux-headers-generic
+      - linux-image-generic
+    state: latest
+
+- name: Install kernel packages
+  apt:
+    name:
+      - apt
+      - apt-utils
+      - libapt-pkg6.0
+      - python3-pip
+    state: present

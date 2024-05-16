@@ -1,0 +1,13 @@
+--Customer_id not nul 
+select count(*)=0 from TPCDS.ANALYTICS.customer_dim
+WHERE c_customer_sk is null;
+
+
+-- Relationship Test
+
+
+-- Accepted Value Testing 
+select count(*)=0 from tpcds.analytics.weekly_sales_inventory 
+where warehouse_sk Not in (1,2,3,4,5,6)
+
+-- Adhoc Test

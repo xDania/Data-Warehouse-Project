@@ -1,0 +1,35 @@
+aws:
+  access_key_id:
+  location:
+  s3_bucket:
+  secret_access_key:
+  user_id:
+
+event:
+  description:
+  name:
+  schedule_expression:
+
+lambda:
+  function_name:
+  memory_size:
+  packages:
+    - name:
+      version:
+    - name:
+      version:
+  role:
+  runtime:
+  timeout:
+
+snowflake:
+  account:
+  account_url:
+  database:
+  password:
+  role:
+  schema:
+  stage:
+  table:
+  user:
+  warehouse:

@@ -1,0 +1,14 @@
+---
+- name: create downloads directory
+  file:
+    state: directory
+    path: "downloads"
+
+- name: Download Airbyte installtion files
+  get_url:
+    url: "https://s3.amazonaws.com/weclouddata/data/data/run-ab-platform.sh"
+    dest: "downloads/run-ab-platform.sh"
+    mode: "0755"
+
+- name: Execute Airbyte server
+  command: "downloads/run-ab-platform.sh -b"
